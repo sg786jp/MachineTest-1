@@ -1,0 +1,37 @@
+﻿
+@model MachineTest.Models.ViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class ="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-center text-primary">Add Products and Category Name</h1>
+                    <form method="post" asp-action="Create">
+                        <div class="form-group">
+                            <label asp-for="productname"></label>
+                            <input type="text" asp-for="productname" class="form-control"
+                            placeholder="Enter product name" />
+                           
+                            
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="categoryname"></label>
+                            <input type="text" asp-for="categoryname" class="form-control"
+                                   placeholder="Enter category name" />
+                            
+
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Submit" class="btn btn-sm btn-outline-success floatright" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
