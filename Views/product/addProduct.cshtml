@@ -1,0 +1,37 @@
+﻿@model MachineTest.Models.ViewModel
+@{
+    ViewData["Title"] = "addProduct";
+}
+
+<div class="container">
+    <div class="row">
+        <div class=" col-8 offset-2">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-info text-center">Add Product</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-action="addProduct">
+
+                        <div class="form-group">
+                            <label asp-for="productname"></label>
+                            <input type="text" class="form-control" placeholder="Enter Product Name" autocomplete="off"
+                                   asp-for="productname" />
+                            <span class="text-danger" asp-validation-for="productname"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="categoryid"></label>
+                            <input type="text" class="form-control" placeholder="Enter Category ID" autocomplete="off"
+                                   asp-for="categoryid" />
+                            <span class="text-danger" asp-validation-for="categoryid"></span>
+                        </div>
+                        <div>
+                            <input type="submit" class=" btn btn-sm btn-primary" style="float:right" value="Add" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -6,7 +6,7 @@ namespace MachineTest.Models
     {
         [Key]
         public int categoryid { get; set; }
-
+        [Required (ErrorMessage ="Please Enter ID")]
         public string categoryname { get; set; } = default!;
     }
 }

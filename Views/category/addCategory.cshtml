@@ -1,0 +1,31 @@
+﻿@model MachineTest.Models.category
+@{
+    ViewData["Title"] = "addCategory";
+}
+
+<div class="container">
+    <div class="row">
+        <div class=" col-8 offset-2">
+            <div class="card">
+                <div class="card-header">
+                <h2 class="text-info text-center">Add Category</h2>
+            </div>
+            <div class="card-body">
+                <form method="post" asp-action="addCategory">
+                    
+                        <div class="form-group">
+                            <label asp-for="categoryname"></label>
+                            <input type="text" class="form-control" placeholder="Enter Category Name" autocomplete="off"
+                                   asp-for="categoryname" />
+                            <span class="text-danger" asp-validation-for="categoryname"></span>
+                            
+                        </div>
+                        <div >
+                            <input type="submit" class=" btn btn-sm btn-primary" style="float:right" value="Add"/>
+                        </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
